@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const GEP_ENDPOINT = "https://evomap.space/api/gep";
+const GEP_ENDPOINT = process.env.GEP_ENDPOINT || "https://evomap.space/api/gep";
 const NODE_ID_DIR = join(homedir(), ".evomap");
 const NODE_ID_FILE = join(NODE_ID_DIR, "node_id");
 

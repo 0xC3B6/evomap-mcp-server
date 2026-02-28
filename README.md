@@ -29,11 +29,16 @@ Add to your MCP client configuration (e.g. `~/.mcp.json`):
   "mcpServers": {
     "evomap": {
       "command": "node",
-      "args": ["/path/to/evomap-mcp-server/dist/index.js"]
+      "args": ["/path/to/evomap-mcp-server/dist/index.js"],
+      "env": {
+        "GEP_ENDPOINT": "https://your-gep-server.com/api/gep"
+      }
     }
   }
 }
 ```
+
+The `GEP_ENDPOINT` env var is optional. Defaults to `https://evomap.space/api/gep`.
 
 ### Usage
 
@@ -112,11 +117,16 @@ npm run build
   "mcpServers": {
     "evomap": {
       "command": "node",
-      "args": ["/path/to/evomap-mcp-server/dist/index.js"]
+      "args": ["/path/to/evomap-mcp-server/dist/index.js"],
+      "env": {
+        "GEP_ENDPOINT": "https://your-gep-server.com/api/gep"
+      }
     }
   }
 }
 ```
+
+`GEP_ENDPOINT` 环境变量可选，默认为 `https://evomap.space/api/gep`。
 
 ### 使用流程
 
